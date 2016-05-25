@@ -1,0 +1,4 @@
+Entities: These are the business objects of the application.
+Use Cases: These use cases orchestrate the flow of data to and from the entities. Are also called Interactors.
+Interface Adapters: This set of adapters convert data from the format most convenient for the use cases and entities. Presenters and Controllers belong here.
+Frameworks and Drivers: This is where all the details go: UI, tools, frameworks, etc.
