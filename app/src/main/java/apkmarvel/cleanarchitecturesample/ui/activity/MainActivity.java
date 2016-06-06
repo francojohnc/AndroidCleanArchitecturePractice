@@ -1,4 +1,4 @@
-package apkmarvel.cleanarchitecturesample.presentation.view.activity;
+package apkmarvel.cleanarchitecturesample.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
