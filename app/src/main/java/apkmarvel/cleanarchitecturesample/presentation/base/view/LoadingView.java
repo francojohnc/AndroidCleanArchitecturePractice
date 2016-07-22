@@ -3,7 +3,7 @@ package apkmarvel.cleanarchitecturesample.presentation.base.view;
 
 import android.content.Context;
 
-public interface LoadingView extends View{
+public interface LoadingView extends BaseView {
 
   void showLoading();
   void hideLoading();

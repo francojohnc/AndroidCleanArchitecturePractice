@@ -1,33 +1,10 @@
 package apkmarvel.cleanarchitecturesample.presentation.login;
 
 
-import apkmarvel.cleanarchitecturesample.presentation.base.presenter.Presenter;
+import apkmarvel.cleanarchitecturesample.presentation.base.presenter.BasePresenter;
 
-public class LoginPresenter implements Presenter<LoginView> {
-
-    private LoginView view;
+public class LoginPresenter extends BasePresenter<LoginView> {
     private LoginInteractor loginInteractor = new LoginInteractor();
-
-    @Override
-    public void setView(LoginView view) {
-        this.view = view;
-    }
-
-    @Override
-    public void onViewResume() {
-
-    }
-
-    @Override
-    public void onViewPause() {
-
-    }
-
-    @Override
-    public void onViewDestroy() {
-
-    }
-
     public void validateCredentials(String username, String password) {
         if (view != null) {
             view.showLoading();
@@ -40,7 +17,6 @@ public class LoginPresenter implements Presenter<LoginView> {
                     view.hideLoading();
                 }
             }
-
             @Override
             public void onPasswordError() {
                 if (view != null) {
@@ -48,7 +24,6 @@ public class LoginPresenter implements Presenter<LoginView> {
                     view.hideLoading();
                 }
             }
-
             @Override
             public void onSuccess() {
                 if (view != null) {
@@ -59,4 +34,18 @@ public class LoginPresenter implements Presenter<LoginView> {
     }
 
 
+    @Override
+    protected void onViewPause() {
+
+    }
+
+    @Override
+    protected void onViewResume() {
+
+    }
+
+    @Override
+    protected void onViewDestroy() {
+
+    }
 }

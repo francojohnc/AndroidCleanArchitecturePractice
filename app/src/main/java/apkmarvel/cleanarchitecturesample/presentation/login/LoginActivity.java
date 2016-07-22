@@ -26,13 +26,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        presenter.setView(this);
+        presenter.bindView(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        presenter.onViewPause();
+        presenter.onViewResume();
     }
 
     @Override
