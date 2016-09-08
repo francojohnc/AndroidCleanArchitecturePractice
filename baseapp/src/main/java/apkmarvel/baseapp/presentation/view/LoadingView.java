@@ -1,5 +1,5 @@
 
-package apkmarvel.cleanarchitecturesample.presentation.base.view;
+package apkmarvel.baseapp.presentation.view;
 
 import android.content.Context;
 

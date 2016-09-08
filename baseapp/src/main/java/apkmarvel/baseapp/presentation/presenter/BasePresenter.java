@@ -1,8 +1,8 @@
-package apkmarvel.cleanarchitecturesample.presentation.base.presenter;
+package apkmarvel.baseapp.presentation.presenter;
 
 import android.support.annotation.NonNull;
 
-import apkmarvel.cleanarchitecturesample.presentation.base.view.BaseView;
+import apkmarvel.baseapp.presentation.view.BaseView;
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 

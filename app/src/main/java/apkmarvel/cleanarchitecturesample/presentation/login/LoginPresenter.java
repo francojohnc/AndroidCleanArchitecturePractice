@@ -1,7 +1,7 @@
 package apkmarvel.cleanarchitecturesample.presentation.login;
 
 
-import apkmarvel.cleanarchitecturesample.presentation.base.presenter.BasePresenter;
+import apkmarvel.baseapp.presentation.presenter.BasePresenter;
 
 public class LoginPresenter extends BasePresenter<LoginView> {
     private LoginInteractor loginInteractor = new LoginInteractor();

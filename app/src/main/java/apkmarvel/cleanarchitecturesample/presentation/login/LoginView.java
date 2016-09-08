@@ -1,7 +1,7 @@
 package apkmarvel.cleanarchitecturesample.presentation.login;
 
 
-import apkmarvel.cleanarchitecturesample.presentation.base.view.LoadingView;
+import apkmarvel.baseapp.presentation.view.LoadingView;
 
 public interface LoginView extends LoadingView {
     void setUsernameError();

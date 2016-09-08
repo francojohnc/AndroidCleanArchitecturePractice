@@ -8,11 +8,10 @@ public abstract class Interactor {
     private static final String TAG = Interactor.class.getSimpleName();
     protected final PostExecutionThread postExecutionThread;
 
-    protected final Observable.Transformer schedulersTransformer =new Observable.Transformer<Observable, Observable>() {
+    protected final Observable.Transformer schedulersTransformer = new Observable.Transformer<Observable, Observable>() {
         @Override
         public Observable call(Observable observable) {
-            return observable.subscribeOn(Schedulers.io())
-                    .observeOn(postExecutionThread.getScheduler());
+            return observable.subscribeOn(Schedulers.io()).observeOn(postExecutionThread.getScheduler());
         }
     };
     public Interactor(final PostExecutionThread postExecutionThread) {

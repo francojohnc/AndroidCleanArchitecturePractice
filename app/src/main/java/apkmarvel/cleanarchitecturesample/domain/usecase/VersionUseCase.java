@@ -10,11 +10,13 @@ public class VersionUseCase extends Interactor {
 
     private static final String TAG = VersionUseCase.class.getSimpleName();
     private final VersionRepository versionRepository;
+
     public VersionUseCase(PostExecutionThread postExecutionThread, VersionRepository versionRepository) {
         super(postExecutionThread);
         this.versionRepository = versionRepository;
     }
     public Observable<AppVersion> getVersion() {
+
         return versionRepository.getVersion().compose(this.<AppVersion>applySchedulers());
     }
 }
